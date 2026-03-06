@@ -2,166 +2,77 @@ import { Icons } from "@/components/icons"
 import { ScrollToTopButton } from "@/components/scroll-to-top-button"
 
 export function SiteFooter() {
+  const navLinks = [
+    { name: "О проблемах", href: "#problems" },
+    { name: "Наши решения", href: "#solutions" },
+    { name: "Преимущества", href: "#features" },
+    { name: "Как работаем", href: "#process" },
+    { name: "Контакты", href: "#contacts" },
+  ]
+
+  const scrollTo = (href: string) => (e: React.MouseEvent) => {
+    e.preventDefault()
+    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" })
+  }
+
   return (
     <footer className="border-t bg-background/80 backdrop-blur-lg">
-      <div className="container flex flex-col gap-10 py-16">
-        <div className="flex flex-col gap-10 md:flex-row">
-          <div className="flex flex-1 flex-col gap-4">
+      <div className="container flex flex-col gap-8 py-12">
+        <div className="flex flex-col gap-8 md:flex-row md:justify-between">
+          <div className="flex flex-col gap-4 max-w-sm">
             <a href="/" className="flex items-center gap-2">
-              <Icons.logo className="h-6 w-6" />
-              <span className="font-heading text-xl tracking-tight">PixelForge</span>
+              <div className="w-8 h-8 rounded-lg bg-orange-500 flex items-center justify-center">
+                <Icons.logo className="h-4 w-4 text-white" />
+              </div>
+              <span className="font-heading text-xl font-bold tracking-tight">RedMar</span>
             </a>
-            <p className="text-muted-foreground max-w-sm opacity-70">
-              Современная библиотека UI-компонентов на базе shadcn/ui и Aceternity UI для веб-разработчиков и дизайнеров
-              в сфере AI-софта.
+            <p className="text-muted-foreground text-sm leading-relaxed opacity-80">
+              Восстановление морских двигателей Volvo Penta и MerCruiser. 15 лет опыта, гарантия 1 год, полная документация.
             </p>
-            <div className="flex gap-4">
-              <a href="https://twitter.com" target="_blank" rel="noreferrer" className="glassmorphic-icon">
-                <Icons.twitter className="h-5 w-5 text-muted-foreground transition-colors hover:text-foreground" />
-                <span className="sr-only">Twitter</span>
-              </a>
-              <a href="https://github.com" target="_blank" rel="noreferrer" className="glassmorphic-icon">
-                <Icons.gitHub className="h-5 w-5 text-muted-foreground transition-colors hover:text-foreground" />
-                <span className="sr-only">GitHub</span>
-              </a>
-              <a href="https://discord.com" target="_blank" rel="noreferrer" className="glassmorphic-icon">
-                <Icons.discord className="h-5 w-5 text-muted-foreground transition-colors hover:text-foreground" />
-                <span className="sr-only">Discord</span>
-              </a>
+            <div className="flex flex-col gap-1 text-sm text-muted-foreground">
+              <span>Московская обл., г. Домодедово, объездное шоссе, вл. 1</span>
+              <a href="tel:+79995550012" className="hover:text-orange-500 transition-colors">+7 (999) 555-00-12</a>
+              <a href="mailto:info@redmar.pro" className="hover:text-orange-500 transition-colors">info@redmar.pro</a>
             </div>
           </div>
-          <div className="grid flex-1 grid-cols-2 gap-10 sm:grid-cols-3">
-            <div className="flex flex-col gap-2">
-              <h3 className="text-sm font-medium tracking-tight">Продукт</h3>
-              <ul className="flex flex-col gap-2">
-                <li>
+
+          <div className="flex flex-col gap-2">
+            <h3 className="text-sm font-semibold tracking-tight mb-1">Навигация</h3>
+            <ul className="flex flex-col gap-2">
+              {navLinks.map((link) => (
+                <li key={link.name}>
                   <a
-                    href="#features"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
+                    href={link.href}
+                    onClick={scrollTo(link.href)}
+                    className="text-sm text-muted-foreground transition-colors hover:text-orange-500"
                   >
-                    Функции
+                    {link.name}
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="#pricing"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
-                  >
-                    Цены
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#components"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
-                  >
-                    Компоненты
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#changelog"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
-                  >
-                    Изменения
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="flex flex-col gap-2">
-              <h3 className="text-sm font-medium tracking-tight">Компания</h3>
-              <ul className="flex flex-col gap-2">
-                <li>
-                  <a
-                    href="#about"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
-                  >
-                    О нас
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#blog"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
-                  >
-                    Блог
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#careers"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
-                  >
-                    Вакансии
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#contact"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
-                  >
-                    Контакты
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="flex flex-col gap-2">
-              <h3 className="text-sm font-medium tracking-tight">Правовая информация</h3>
-              <ul className="flex flex-col gap-2">
-                <li>
-                  <a
-                    href="#privacy"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
-                  >
-                    Конфиденциальность
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#terms"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
-                  >
-                    Условия
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#cookies"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
-                  >
-                    Cookies
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#licenses"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
-                  >
-                    Лицензии
-                  </a>
-                </li>
-              </ul>
-            </div>
+              ))}
+            </ul>
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <h3 className="text-sm font-semibold tracking-tight mb-1">Режим работы</h3>
+            <p className="text-sm text-muted-foreground">Ежедневно: 9:00 — 19:00</p>
+            <a
+              href="#contacts"
+              onClick={scrollTo("#contacts")}
+              className="mt-3 inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white text-sm font-medium transition-colors"
+            >
+              Рассчитать стоимость
+            </a>
           </div>
         </div>
-        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+
+        <div className="border-t border-border pt-6 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm text-muted-foreground opacity-70">
-            &copy; {new Date().getFullYear()} PixelForge. Все права защищены.
+            &copy; {new Date().getFullYear()} RedMar. Все права защищены.
           </p>
-          <div className="flex gap-4">
-            <a
-              href="#terms"
-              className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
-            >
-              Условия
-            </a>
-            <a
-              href="#privacy"
-              className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
-            >
-              Конфиденциальность
-            </a>
-          </div>
+          <p className="text-xs text-muted-foreground opacity-50">
+            Восстановление двигателей Volvo Penta и MerCruiser
+          </p>
         </div>
       </div>
       <ScrollToTopButton />

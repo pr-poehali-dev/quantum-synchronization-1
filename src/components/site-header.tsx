@@ -10,12 +10,11 @@ import { useScrollPosition } from "@/hooks/use-scroll-position"
 
 const navItems = [
   { name: "Главная", href: "#home" },
-  { name: "Функции", href: "#features" },
-  { name: "Компоненты", href: "#components" },
-  { name: "Отзывы", href: "#testimonials" },
-  { name: "Цены", href: "#pricing" },
-  { name: "Блог", href: "#blog" },
-  { name: "FAQ", href: "#faq" },
+  { name: "Проблемы", href: "#problems" },
+  { name: "Решения", href: "#solutions" },
+  { name: "Преимущества", href: "#features" },
+  { name: "Как работаем", href: "#process" },
+  { name: "Контакты", href: "#contacts" },
 ]
 
 export function SiteHeader() {
@@ -39,8 +38,10 @@ export function SiteHeader() {
     >
       <div className="container px-4 md:px-6 flex h-16 items-center justify-between">
         <a href="/" className="flex items-center space-x-2 z-10">
-          <Icons.logo className="h-6 w-6" />
-          <span className="font-heading text-xl tracking-tight">PixelForge</span>
+          <div className="w-8 h-8 rounded-lg bg-orange-500 flex items-center justify-center">
+            <Icons.logo className="h-4 w-4 text-white" />
+          </div>
+          <span className="font-heading text-xl font-bold tracking-tight">RedMar</span>
         </a>
 
         {/* Desktop Navigation - Hidden on mobile */}
@@ -68,19 +69,12 @@ export function SiteHeader() {
 
           {/* Desktop CTA Buttons - Hidden on mobile */}
           <div className="hidden md:flex items-center space-x-2">
-            <Button variant="ghost" size="sm" className="neumorphic-button" asChild>
-              <a href="#login">Войти</a>
-            </Button>
-            <Button size="sm" className="neumorphic-button-primary" asChild>
-              <a href="#register">
-                Начать
-                <motion.div
-                  className="ml-1"
-                  animate={{ x: [0, 3, 0] }}
-                  transition={{ repeat: Infinity, repeatDelay: 3, duration: 0.8 }}
-                >
-                  {'>'}
-                </motion.div>
+            <Button size="sm" className="bg-orange-500 hover:bg-orange-600 text-white rounded-xl" asChild>
+              <a href="#contacts" onClick={(e) => {
+                e.preventDefault()
+                document.querySelector("#contacts")?.scrollIntoView({ behavior: "smooth" })
+              }}>
+                Рассчитать стоимость
               </a>
             </Button>
           </div>
@@ -115,8 +109,10 @@ export function SiteHeader() {
             >
               <div className="flex items-center justify-between p-4 border-b border-border">
                 <a href="/" className="flex items-center space-x-2" onClick={closeMobileMenu}>
-                  <Icons.logo className="h-6 w-6" />
-                  <span className="font-heading text-lg">PixelForge</span>
+                  <div className="w-7 h-7 rounded-lg bg-orange-500 flex items-center justify-center">
+                    <Icons.logo className="h-3.5 w-3.5 text-white" />
+                  </div>
+                  <span className="font-heading text-lg font-bold">RedMar</span>
                 </a>
                 <button
                   onClick={closeMobileMenu}
@@ -149,18 +145,15 @@ export function SiteHeader() {
               </div>
 
               <div className="mt-auto p-4 border-t border-border">
-                <div className="grid grid-cols-2 gap-3">
-                  <Button variant="outline" className="w-full" asChild>
-                    <a href="#login" onClick={closeMobileMenu}>
-                      Войти
-                    </a>
-                  </Button>
-                  <Button className="w-full neumorphic-button-primary" asChild>
-                    <a href="#register" onClick={closeMobileMenu}>
-                      Начать
-                    </a>
-                  </Button>
-                </div>
+                <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white rounded-xl" asChild>
+                  <a href="#contacts" onClick={(e) => {
+                    e.preventDefault()
+                    document.querySelector("#contacts")?.scrollIntoView({ behavior: "smooth" })
+                    closeMobileMenu()
+                  }}>
+                    Рассчитать стоимость
+                  </a>
+                </Button>
               </div>
             </motion.div>
           </motion.div>

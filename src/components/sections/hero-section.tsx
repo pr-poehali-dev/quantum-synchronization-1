@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, ShieldCheck, FileText } from "lucide-react"
 
 import { SpotlightCard } from "@/components/ui/spotlight-card"
 import { ScrollReveal } from "@/components/scroll-reveal"
@@ -7,7 +7,6 @@ import { MagneticButton } from "@/components/ui/magnetic-button"
 import { AnimatedBackground } from "@/components/ui/animated-background"
 import { GradientButton } from "@/components/ui-library/buttons/gradient-button"
 
-// Animation variants
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -29,12 +28,17 @@ const itemVariants = {
 }
 
 export function HeroSection() {
+  const scrollToContact = (e: React.MouseEvent) => {
+    e.preventDefault()
+    document.querySelector("#contacts")?.scrollIntoView({ behavior: "smooth" })
+  }
+
   return (
-    <section id="home" className="relative w-full py-12 md:py-24 lg:py-32 xl:py-48 overflow-hidden">
-      <AnimatedBackground variant="gradient" color="rgba(220, 38, 38, 0.08)" secondaryColor="rgba(75, 85, 99, 0.08)" />
+    <section id="home" className="relative w-full py-12 md:py-24 lg:py-32 xl:py-40 overflow-hidden">
+      <AnimatedBackground variant="gradient" color="rgba(249, 115, 22, 0.06)" secondaryColor="rgba(30, 58, 100, 0.08)" />
 
       <div className="container px-6 md:px-8">
-        <div className="grid gap-8 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+        <div className="grid gap-8 lg:grid-cols-[1fr_460px] lg:gap-12 xl:grid-cols-[1fr_560px]">
           <ScrollReveal>
             <motion.div
               className="flex flex-col justify-center space-y-6"
@@ -43,28 +47,39 @@ export function HeroSection() {
               animate="visible"
             >
               <motion.div className="space-y-4" variants={itemVariants}>
-                {/* Modern Hero Header with Gradient */}
-                <h1 className="text-4xl font-heading font-bold tracking-tighter sm:text-5xl xl:text-7xl/none">
-                  <span className="gradient-text">UI-компоненты</span>
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-500 text-sm font-medium mb-2">
+                  <span className="inline-block w-2 h-2 rounded-full bg-orange-500"></span>
+                  Volvo Penta · MerCruiser · Морские двигатели
+                </div>
+                <h1 className="text-4xl font-heading font-bold tracking-tight sm:text-5xl xl:text-6xl/none">
+                  <span className="gradient-text">Восстановленный двигатель</span>
                   <br />
-                  <span className="text-foreground">для веб-разработчиков</span>
+                  <span className="text-foreground">с нулевым пробегом.</span>
+                  <br />
+                  <span className="text-foreground">Вдвое дешевле нового.</span>
                 </h1>
-                <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400 opacity-70">
-                  Премиум-библиотека компонентов на shadcn/ui и Aceternity UI для современных веб-приложений.
-                  Создана для разработчиков и дизайнеров в сфере AI-софта.
-                </p>
+                <div className="flex flex-wrap gap-4 pt-2">
+                  <div className="flex items-center gap-2 text-muted-foreground">
+                    <ShieldCheck className="h-5 w-5 text-orange-500 flex-shrink-0" />
+                    <span className="text-sm font-medium">Гарантия 1 год</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-muted-foreground">
+                    <FileText className="h-5 w-5 text-orange-500 flex-shrink-0" />
+                    <span className="text-sm font-medium">Полная документация</span>
+                  </div>
+                </div>
               </motion.div>
 
-              <motion.div className="flex flex-col gap-6 sm:flex-row sm:items-center" variants={itemVariants}>
+              <motion.div className="flex flex-col gap-4 sm:flex-row sm:items-center" variants={itemVariants}>
                 <GradientButton
-                  glowAmount={5}
+                  glowAmount={8}
                   className="px-6 py-2.5 text-base"
-                  gradientFrom="from-red-500"
-                  gradientTo="to-red-700"
+                  gradientFrom="from-orange-500"
+                  gradientTo="to-orange-600"
                   asChild
                 >
-                  <a href="#components" className="flex items-center">
-                    Начать
+                  <a href="#contacts" onClick={scrollToContact} className="flex items-center">
+                    Рассчитать стоимость моего двигателя
                     <motion.span
                       className="ml-2 inline-block"
                       animate={{ x: [0, 4, 0] }}
@@ -74,55 +89,64 @@ export function HeroSection() {
                     </motion.span>
                   </a>
                 </GradientButton>
-
                 <MagneticButton className="neumorphic-button">
-                  <a href="#features" className="px-6 py-2.5 block">
-                    Возможности
+                  <a href="#process" className="px-6 py-2.5 block" onClick={(e) => {
+                    e.preventDefault()
+                    document.querySelector("#process")?.scrollIntoView({ behavior: "smooth" })
+                  }}>
+                    Как мы работаем
                   </a>
                 </MagneticButton>
               </motion.div>
 
-              <motion.div variants={itemVariants} className="pt-4">
+              <motion.div variants={itemVariants} className="pt-2">
                 <p className="text-sm text-muted-foreground flex items-center">
                   <span className="inline-block w-2 h-2 rounded-full bg-green-500 mr-2"></span>
-                  Более 2 000 разработчиков по всему миру
+                  15 лет специализируемся на морских двигателях
                 </p>
               </motion.div>
             </motion.div>
           </ScrollReveal>
 
           <ScrollReveal delay={0.3}>
-            <SpotlightCard className="relative h-[450px] w-full overflow-hidden rounded-xl border glassmorphic-card p-1 border-glow-red">
-              <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 via-transparent to-gray-900/20 z-10"></div>
-              <div className="relative z-20 h-full w-full rounded-xl bg-gradient-to-br from-red-950/50 to-gray-950/50 p-6 flex items-center justify-center">
-                <div className="grid grid-cols-2 gap-6 w-full max-w-md">
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.6 }}
-                    className="col-span-2 h-24 rounded-xl bg-red-800/20 border border-red-800/30 flex items-center justify-center glassmorphic-inner-card"
-                    whileHover={{ scale: 1.03, boxShadow: "0 0 15px rgba(220, 38, 38, 0.3)" }}
-                  >
-                    <span className="font-heading text-xl text-white tracking-tight">Премиум-компоненты</span>
-                  </motion.div>
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.8 }}
-                    className="h-32 rounded-xl bg-gray-800/20 border border-gray-800/30 flex items-center justify-center glassmorphic-inner-card"
-                    whileHover={{ scale: 1.03, boxShadow: "0 0 15px rgba(75, 85, 99, 0.3)" }}
-                  >
-                    <span className="font-heading text-white tracking-tight">Tailwind</span>
-                  </motion.div>
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 1.0 }}
-                    className="h-32 rounded-xl bg-red-900/20 border border-red-900/30 flex items-center justify-center glassmorphic-inner-card"
-                    whileHover={{ scale: 1.03, boxShadow: "0 0 15px rgba(220, 38, 38, 0.3)" }}
-                  >
-                    <span className="font-heading text-white tracking-tight">TypeScript</span>
-                  </motion.div>
+            <SpotlightCard className="relative overflow-hidden rounded-2xl border border-orange-500/20 p-1">
+              <div className="absolute inset-0 bg-gradient-to-br from-orange-900/10 via-transparent to-blue-900/10 z-10 rounded-2xl pointer-events-none"></div>
+              <div className="relative z-20 rounded-xl overflow-hidden">
+                <img
+                  src="https://cdn.poehali.dev/files/6a673fa0-e2f4-4dfa-9e8c-d9925c7daff7.jpg"
+                  alt="Восстановленный двигатель Volvo Penta"
+                  className="w-full h-[420px] object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                  <div className="flex gap-4">
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.8 }}
+                      className="flex-1 bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/20 text-center"
+                    >
+                      <div className="text-2xl font-bold text-orange-400">15 лет</div>
+                      <div className="text-xs text-white/70">опыта</div>
+                    </motion.div>
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 1.0 }}
+                      className="flex-1 bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/20 text-center"
+                    >
+                      <div className="text-2xl font-bold text-orange-400">×2</div>
+                      <div className="text-xs text-white/70">дешевле нового</div>
+                    </motion.div>
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 1.2 }}
+                      className="flex-1 bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/20 text-center"
+                    >
+                      <div className="text-2xl font-bold text-orange-400">1 год</div>
+                      <div className="text-xs text-white/70">гарантия</div>
+                    </motion.div>
+                  </div>
                 </div>
               </div>
             </SpotlightCard>
