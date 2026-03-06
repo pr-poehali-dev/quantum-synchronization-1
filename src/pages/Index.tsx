@@ -16,7 +16,7 @@ import { MouseGlow } from "@/components/ui-library/effects/mouse-glow"
 const Index = () => {
   return (
     <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
-      <div className="relative flex min-h-screen flex-col">
+      <div className="relative flex min-h-screen flex-col overflow-x-hidden w-full">
         <SiteHeader />
         <PageTransition>
           <main className="flex-1 flex flex-col items-center relative">
