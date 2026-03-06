@@ -9,6 +9,7 @@ import { PortfolioSection } from "@/components/sections/portfolio-section"
 import { FeaturesSection } from "@/components/sections/features-section"
 import { ProcessSection } from "@/components/sections/process-section"
 import { PhilosophySection } from "@/components/sections/philosophy-section"
+import { EnginesSection } from "@/components/sections/engines-section"
 import { ContactsSection } from "@/components/sections/contacts-section"
 import { MouseGlow } from "@/components/ui-library/effects/mouse-glow"
 
@@ -36,6 +37,7 @@ const Index = () => {
             <FeaturesSection />
             <ProcessSection />
             <PhilosophySection />
+            <EnginesSection />
             <ContactsSection />
           </main>
         </PageTransition>
