@@ -57,7 +57,7 @@ export function PortfolioSection() {
       <div className="container max-w-6xl mx-auto px-4">
         <ScrollReveal>
           <div className="text-center mb-14">
-            <span className="inline-block text-xs font-semibold tracking-widest uppercase text-red-500 mb-3">
+            <span className="inline-block text-xs font-semibold tracking-widest uppercase text-gray-500 dark:text-gray-400 mb-3">
               Результаты
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">

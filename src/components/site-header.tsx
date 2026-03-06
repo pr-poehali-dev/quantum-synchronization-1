@@ -38,7 +38,7 @@ export function SiteHeader() {
     >
       <div className="container px-4 md:px-6 flex h-16 items-center justify-between">
         <a href="/" className="flex items-center z-10">
-          <span className="font-heading text-base font-black tracking-tight px-2 py-1 bg-red-600 text-white rounded-l-md">RED</span>
+          <span className="font-heading text-base font-black tracking-tight px-2 py-1 bg-gray-800 text-white rounded-l-md">RED</span>
           <span className="font-heading text-base font-black tracking-tight px-2 py-1 bg-blue-700 text-white rounded-r-md">MAR</span>
         </a>
 
@@ -57,7 +57,7 @@ export function SiteHeader() {
               }}
             >
               {item.name}
-              <span className="absolute inset-x-0 bottom-0 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-200"></span>
+              <span className="absolute inset-x-0 bottom-0 h-0.5 bg-foreground scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-200"></span>
             </a>
           ))}
         </nav>
@@ -67,7 +67,7 @@ export function SiteHeader() {
 
           {/* Desktop CTA Buttons - Hidden on mobile */}
           <div className="hidden md:flex items-center space-x-2">
-            <Button size="sm" className="bg-red-600 hover:bg-red-700 text-white rounded-xl" asChild>
+            <Button size="sm" className="bg-gray-800 hover:bg-gray-900 text-white rounded-xl dark:bg-gray-200 dark:text-gray-900 dark:hover:bg-white" asChild>
               <a href="#contacts" onClick={(e) => {
                 e.preventDefault()
                 document.querySelector("#contacts")?.scrollIntoView({ behavior: "smooth" })
@@ -108,7 +108,7 @@ export function SiteHeader() {
             >
               <div className="flex items-center justify-between p-4 border-b border-border">
                 <a href="/" className="flex items-center" onClick={closeMobileMenu}>
-                  <span className="font-heading text-base font-black tracking-tight px-2 py-1 bg-red-600 text-white rounded-l-md">RED</span>
+                  <span className="font-heading text-base font-black tracking-tight px-2 py-1 bg-gray-800 text-white rounded-l-md">RED</span>
                   <span className="font-heading text-base font-black tracking-tight px-2 py-1 bg-blue-700 text-white rounded-r-md">MAR</span>
                 </a>
                 <button
@@ -142,7 +142,7 @@ export function SiteHeader() {
               </div>
 
               <div className="mt-auto p-4 border-t border-border">
-                <Button className="w-full bg-red-600 hover:bg-red-700 text-white rounded-xl" asChild>
+                <Button className="w-full bg-gray-800 hover:bg-gray-900 text-white rounded-xl dark:bg-gray-200 dark:text-gray-900 dark:hover:bg-white" asChild>
                   <a href="#contacts" onClick={(e) => {
                     e.preventDefault()
                     document.querySelector("#contacts")?.scrollIntoView({ behavior: "smooth" })

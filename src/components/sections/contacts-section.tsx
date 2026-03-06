@@ -5,12 +5,12 @@ import Icon from "@/components/ui/icon"
 export function ContactsSection() {
   return (
     <section id="contacts" className="relative w-full py-16 md:py-24 overflow-hidden">
-      <AnimatedBackground variant="gradient" color="rgba(220, 38, 38, 0.07)" secondaryColor="rgba(30, 58, 100, 0.07)" />
+      <AnimatedBackground variant="gradient" color="rgba(100, 100, 100, 0.07)" secondaryColor="rgba(30, 58, 100, 0.07)" />
 
       <div className="container px-4 md:px-6">
         <ScrollReveal>
           <div className="text-center mb-12 space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-600/10 border border-red-600/20 text-red-600 text-sm font-medium">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-500/10 border border-gray-500/20 text-gray-600 dark:text-gray-400 text-sm font-medium">
               Связаться с нами
             </div>
             <h2 className="text-3xl font-heading font-bold tracking-tight sm:text-4xl">
@@ -23,8 +23,8 @@ export function ContactsSection() {
           <ScrollReveal delay={0.1}>
             <div className="rounded-2xl border border-border bg-card p-6 flex flex-col gap-5">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-red-600/10 flex items-center justify-center flex-shrink-0">
-                  <Icon name="MapPin" className="h-5 w-5 text-red-600" />
+                <div className="w-10 h-10 rounded-xl bg-gray-500/10 flex items-center justify-center flex-shrink-0">
+                  <Icon name="MapPin" className="h-5 w-5 text-gray-600 dark:text-gray-400" />
                 </div>
                 <div>
                   <div className="text-xs text-muted-foreground uppercase tracking-wider font-medium mb-1">Адрес</div>
@@ -34,8 +34,8 @@ export function ContactsSection() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-red-600/10 flex items-center justify-center flex-shrink-0">
-                  <Icon name="Clock" className="h-5 w-5 text-red-600" />
+                <div className="w-10 h-10 rounded-xl bg-gray-500/10 flex items-center justify-center flex-shrink-0">
+                  <Icon name="Clock" className="h-5 w-5 text-gray-600 dark:text-gray-400" />
                 </div>
                 <div>
                   <div className="text-xs text-muted-foreground uppercase tracking-wider font-medium mb-1">Режим работы</div>
@@ -44,12 +44,12 @@ export function ContactsSection() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-red-600/10 flex items-center justify-center flex-shrink-0">
-                  <Icon name="Phone" className="h-5 w-5 text-red-600" />
+                <div className="w-10 h-10 rounded-xl bg-gray-500/10 flex items-center justify-center flex-shrink-0">
+                  <Icon name="Phone" className="h-5 w-5 text-gray-600 dark:text-gray-400" />
                 </div>
                 <div>
                   <div className="text-xs text-muted-foreground uppercase tracking-wider font-medium mb-1">Телефон</div>
-                  <a href="tel:+79995550012" className="font-semibold text-base hover:text-red-600 transition-colors">
+                  <a href="tel:+79995550012" className="font-semibold text-base hover:text-foreground transition-colors">
                     +7 (999) 555-00-12
                   </a>
                   <div className="flex gap-2 mt-2">
@@ -76,12 +76,12 @@ export function ContactsSection() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-red-600/10 flex items-center justify-center flex-shrink-0">
-                  <Icon name="Mail" className="h-5 w-5 text-red-600" />
+                <div className="w-10 h-10 rounded-xl bg-gray-500/10 flex items-center justify-center flex-shrink-0">
+                  <Icon name="Mail" className="h-5 w-5 text-gray-600 dark:text-gray-400" />
                 </div>
                 <div>
                   <div className="text-xs text-muted-foreground uppercase tracking-wider font-medium mb-1">Email</div>
-                  <a href="mailto:info@redmar.pro" className="font-medium text-sm hover:text-red-600 transition-colors">
+                  <a href="mailto:info@redmar.pro" className="font-medium text-sm hover:text-foreground transition-colors">
                     info@redmar.pro
                   </a>
                 </div>

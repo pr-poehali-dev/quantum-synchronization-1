@@ -21,7 +21,7 @@ export function SiteFooter() {
         <div className="flex flex-col gap-8 md:flex-row md:justify-between">
           <div className="flex flex-col gap-4 max-w-sm">
             <a href="/" className="flex items-center">
-              <span className="font-heading text-base font-black tracking-tight px-2 py-1 bg-red-600 text-white rounded-l-md">RED</span>
+              <span className="font-heading text-base font-black tracking-tight px-2 py-1 bg-gray-800 text-white rounded-l-md">RED</span>
               <span className="font-heading text-base font-black tracking-tight px-2 py-1 bg-blue-700 text-white rounded-r-md">MAR</span>
             </a>
             <p className="text-muted-foreground text-sm leading-relaxed opacity-80">
@@ -29,8 +29,8 @@ export function SiteFooter() {
             </p>
             <div className="flex flex-col gap-1 text-sm text-muted-foreground">
               <span>Московская обл., г. Домодедово, объездное шоссе, вл. 1</span>
-              <a href="tel:+79995550012" className="hover:text-red-600 transition-colors">+7 (999) 555-00-12</a>
-              <a href="mailto:info@redmar.pro" className="hover:text-red-600 transition-colors">info@redmar.pro</a>
+              <a href="tel:+79995550012" className="hover:text-foreground transition-colors">+7 (999) 555-00-12</a>
+              <a href="mailto:info@redmar.pro" className="hover:text-foreground transition-colors">info@redmar.pro</a>
             </div>
           </div>
 
@@ -42,7 +42,7 @@ export function SiteFooter() {
                   <a
                     href={link.href}
                     onClick={scrollTo(link.href)}
-                    className="text-sm text-muted-foreground transition-colors hover:text-red-600"
+                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                   >
                     {link.name}
                   </a>
@@ -57,7 +57,7 @@ export function SiteFooter() {
             <a
               href="#contacts"
               onClick={scrollTo("#contacts")}
-              className="mt-3 inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-red-600 hover:bg-red-700 text-white text-sm font-medium transition-colors"
+              className="mt-3 inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gray-800 hover:bg-gray-900 text-white text-sm font-medium transition-colors dark:bg-gray-200 dark:text-gray-900 dark:hover:bg-white"
             >
               Рассчитать стоимость
             </a>

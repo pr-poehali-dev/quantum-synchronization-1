@@ -8,7 +8,7 @@ import { OutlineButton } from "@/components/ui-library/buttons/button-variants"
 
 export function CtaSection() {
   return (
-    <section id="cta" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-red-950/30 to-gray-950/30">
+    <section id="cta" className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-gray-900/20 to-gray-950/30">
       <div className="container px-4 md:px-6">
         <ScrollReveal>
           <div className="flex flex-col items-center justify-center space-y-6 text-center">
@@ -37,8 +37,8 @@ export function CtaSection() {
                 glowAmount={5}
                 size="lg"
                 className="px-8 py-3"
-                gradientFrom="from-red-500"
-                gradientTo="to-red-700"
+                gradientFrom="from-gray-700"
+                gradientTo="to-gray-900"
                 asChild
               >
                 <a href="#pricing" className="flex items-center">
@@ -54,7 +54,7 @@ export function CtaSection() {
               </GradientButton>
 
               <AnimatedGradientBorder
-                colors={["#dc2626", "#4b5563", "#dc2626", "#4b5563"]}
+                colors={["#6b7280", "#4b5563", "#9ca3af", "#4b5563"]}
                 borderWidth={1}
                 duration={6}
               >

@@ -17,20 +17,20 @@ const problems = [
   },
   {
     icon: "Thermometer",
-    color: "text-red-400",
-    bgColor: "bg-red-500/10",
-    borderColor: "border-red-500/20",
-    glowColor: "rgba(239, 68, 68, 0.15)",
+    color: "text-gray-500 dark:text-gray-400",
+    bgColor: "bg-gray-500/10",
+    borderColor: "border-gray-500/20",
+    glowColor: "rgba(100, 100, 100, 0.15)",
     title: "Перегрев и заклинивание",
     description:
       "Перегрев ведёт к деформации головки, задирам поршней. Восстанавливаем геометрию и заменяем всё, что вышло из строя.",
   },
   {
     icon: "Gauge",
-    color: "text-red-500",
-    bgColor: "bg-red-600/10",
-    borderColor: "border-red-600/20",
-    glowColor: "rgba(220, 38, 38, 0.15)",
+    color: "text-gray-600 dark:text-gray-400",
+    bgColor: "bg-gray-500/10",
+    borderColor: "border-gray-500/20",
+    glowColor: "rgba(100, 100, 100, 0.15)",
     title: "Износ — двигатель «устал»",
     description:
       "Масложор, стук, падение мощности. Замена поршневой, вкладышей, капитальное обновление всего агрегата.",
@@ -40,12 +40,12 @@ const problems = [
 export function ProblemsSection() {
   return (
     <section id="problems" className="relative w-full py-16 md:py-24 overflow-hidden">
-      <AnimatedBackground variant="dots" color="rgba(220, 38, 38, 0.04)" />
+      <AnimatedBackground variant="dots" color="rgba(100, 100, 100, 0.04)" />
 
       <div className="container px-4 md:px-6">
         <ScrollReveal>
           <div className="text-center mb-12 space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-600/10 border border-red-600/20 text-red-600 text-sm font-medium">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-500/10 border border-gray-500/20 text-gray-600 dark:text-gray-400 text-sm font-medium">
               Диагностика неисправностей
             </div>
             <h2 className="text-3xl font-heading font-bold tracking-tight sm:text-4xl">
