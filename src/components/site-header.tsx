@@ -10,10 +10,10 @@ import { useScrollPosition } from "@/hooks/use-scroll-position"
 
 const navItems = [
   { name: "Главная", href: "#home" },
-  { name: "Проблемы", href: "#problems" },
-  { name: "Решения", href: "#solutions" },
+  { name: "Услуги", href: "#solutions" },
   { name: "Преимущества", href: "#features" },
   { name: "Как работаем", href: "#process" },
+  { name: "Наши работы", href: "#portfolio" },
   { name: "Контакты", href: "#contacts" },
 ]
 
@@ -92,7 +92,8 @@ export function SiteHeader() {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            className="fixed inset-0 z-40 bg-background/50 backdrop-blur-sm md:hidden"
+            className="fixed inset-0 z-40 bg-background/60 backdrop-blur-sm md:hidden"
+            onClick={closeMobileMenu}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
