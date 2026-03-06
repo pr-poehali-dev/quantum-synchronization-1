@@ -96,47 +96,61 @@ export function HeroSection() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.3} className="overflow-hidden">
-            <SpotlightCard className="relative overflow-hidden rounded-2xl border border-gray-500/20 p-1 w-full">
-              <div className="absolute inset-0 bg-gradient-to-br from-gray-900/10 via-transparent to-blue-900/10 z-10 rounded-2xl pointer-events-none"></div>
-              <div className="relative z-20 rounded-xl overflow-hidden">
-                <img
-                  src="https://cdn.poehali.dev/files/6a673fa0-e2f4-4dfa-9e8c-d9925c7daff7.jpg"
-                  alt="Восстановленный двигатель Volvo Penta"
-                  className="w-full h-[220px] sm:h-[300px] md:h-[400px] lg:h-[420px] object-cover"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3 sm:p-5">
-                  <div className="flex gap-2">
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.8 }}
-                      className="flex-1 bg-white/10 backdrop-blur-sm rounded-xl p-2 sm:p-3 border border-white/20 text-center"
-                    >
-                      <div className="text-lg sm:text-2xl font-bold text-white">15 лет</div>
-                      <div className="text-xs text-white/70">опыта</div>
-                    </motion.div>
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 1.0 }}
-                      className="flex-1 bg-white/10 backdrop-blur-sm rounded-xl p-2 sm:p-3 border border-white/20 text-center"
-                    >
-                      <div className="text-lg sm:text-2xl font-bold text-white">×2</div>
-                      <div className="text-xs text-white/70">дешевле нового</div>
-                    </motion.div>
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 1.2 }}
-                      className="flex-1 bg-white/10 backdrop-blur-sm rounded-xl p-2 sm:p-3 border border-white/20 text-center"
-                    >
-                      <div className="text-lg sm:text-2xl font-bold text-white">1 год</div>
-                      <div className="text-xs text-white/70">гарантия</div>
-                    </motion.div>
-                  </div>
+            <div className="relative w-full rounded-2xl overflow-hidden border border-gray-500/20">
+              {/* Два фото рядом */}
+              <div className="flex gap-1">
+                <div className="flex-1 overflow-hidden">
+                  <img
+                    src="https://cdn.poehali.dev/files/6a673fa0-e2f4-4dfa-9e8c-d9925c7daff7.jpg"
+                    alt="Восстановленный двигатель Volvo Penta — красный"
+                    className="w-full h-[260px] sm:h-[360px] md:h-[440px] lg:h-[480px] object-cover object-center"
+                  />
+                </div>
+                <div className="flex-1 overflow-hidden">
+                  <img
+                    src="https://cdn.poehali.dev/projects/1d0efd06-d472-4a9f-94b2-d81e299c245e/bucket/055bed51-91e9-4b8c-846c-3b60a8a02f65.jpg"
+                    alt="Восстановленный двигатель MerCruiser — чёрный"
+                    className="w-full h-[260px] sm:h-[360px] md:h-[440px] lg:h-[480px] object-cover object-center"
+                  />
                 </div>
               </div>
-            </SpotlightCard>
+
+              {/* Градиент сверху */}
+              <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-background/60 to-transparent pointer-events-none" />
+
+              {/* Градиент снизу со статистикой */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-3 sm:p-5 pt-10">
+                <div className="flex gap-2">
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.8 }}
+                    className="flex-1 bg-white/10 backdrop-blur-sm rounded-xl p-2 sm:p-3 border border-white/20 text-center"
+                  >
+                    <div className="text-base sm:text-2xl font-bold text-white">15 лет</div>
+                    <div className="text-xs text-white/70">опыта</div>
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 1.0 }}
+                    className="flex-1 bg-white/10 backdrop-blur-sm rounded-xl p-2 sm:p-3 border border-white/20 text-center"
+                  >
+                    <div className="text-base sm:text-2xl font-bold text-white">×2</div>
+                    <div className="text-xs text-white/70">дешевле нового</div>
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 1.2 }}
+                    className="flex-1 bg-white/10 backdrop-blur-sm rounded-xl p-2 sm:p-3 border border-white/20 text-center"
+                  >
+                    <div className="text-base sm:text-2xl font-bold text-white">1 год</div>
+                    <div className="text-xs text-white/70">гарантия</div>
+                  </motion.div>
+                </div>
+              </div>
+            </div>
           </ScrollReveal>
         </div>
       </div>
