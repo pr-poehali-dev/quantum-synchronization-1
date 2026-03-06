@@ -24,6 +24,26 @@ const photos = [
     url: "https://cdn.poehali.dev/projects/1d0efd06-d472-4a9f-94b2-d81e299c245e/bucket/90a7d4a8-57d3-4bf4-8a50-b830a593cf45.jpg",
     caption: "Двигатель после покраски и финальной сборки",
   },
+  {
+    url: "https://cdn.poehali.dev/projects/1d0efd06-d472-4a9f-94b2-d81e299c245e/bucket/9f51dd6e-c831-44c4-a724-969c5bc7d2ff.jpg",
+    caption: "Готовый двигатель — контрольная фотосъёмка перед отгрузкой",
+  },
+  {
+    url: "https://cdn.poehali.dev/projects/1d0efd06-d472-4a9f-94b2-d81e299c245e/bucket/18631ae3-2ed7-4b79-8ab7-c89e6ec656d6.jpg",
+    caption: "Блок в процессе сборки — коленвал и вкладыши",
+  },
+  {
+    url: "https://cdn.poehali.dev/projects/1d0efd06-d472-4a9f-94b2-d81e299c245e/bucket/bc758a6a-24b4-498d-9377-349fe19bfc00.jpg",
+    caption: "Двигатель Volvo Penta — полностью восстановлен и собран",
+  },
+  {
+    url: "https://cdn.poehali.dev/projects/1d0efd06-d472-4a9f-94b2-d81e299c245e/bucket/7e6d1699-1ebf-4651-b911-370cbb1f63d1.jpg",
+    caption: "MerCruiser 4.3 — готов к установке на катер",
+  },
+  {
+    url: "https://cdn.poehali.dev/projects/1d0efd06-d472-4a9f-94b2-d81e299c245e/bucket/af1a086f-6d8e-4fb3-86e5-41dd66ddeb61.jpg",
+    caption: "Несколько двигателей в работе одновременно",
+  },
 ]
 
 export function PortfolioSection() {
