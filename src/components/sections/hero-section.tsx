@@ -37,8 +37,8 @@ export function HeroSection() {
     <section id="home" className="relative w-full py-12 md:py-24 lg:py-32 xl:py-40 overflow-hidden">
       <AnimatedBackground variant="gradient" color="rgba(100, 100, 100, 0.06)" secondaryColor="rgba(30, 58, 100, 0.08)" />
 
-      <div className="container px-4 md:px-6">
-        <div className="grid gap-6 lg:grid-cols-[1fr_460px] lg:gap-12 xl:grid-cols-[1fr_560px]">
+      <div className="container px-4 md:px-6 max-w-full">
+        <div className="grid gap-8 lg:grid-cols-[1fr_460px] lg:gap-12 xl:grid-cols-[1fr_560px] min-w-0">
           <ScrollReveal>
             <motion.div
               className="flex flex-col justify-center space-y-6"
@@ -47,8 +47,8 @@ export function HeroSection() {
               animate="visible"
             >
               <motion.div className="space-y-4" variants={itemVariants}>
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-500/10 border border-gray-500/20 text-gray-600 dark:text-gray-400 text-sm font-medium mb-2">
-                  <span className="inline-block w-2 h-2 rounded-full bg-gray-600 dark:bg-gray-400"></span>
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-500/10 border border-gray-500/20 text-gray-600 dark:text-gray-400 text-xs sm:text-sm font-medium mb-2 max-w-full flex-wrap">
+                  <span className="inline-block w-2 h-2 rounded-full bg-gray-600 dark:bg-gray-400 flex-shrink-0"></span>
                   Volvo Penta · MerCruiser · Морские двигатели
                 </div>
                 <h1 className="text-3xl font-heading font-bold tracking-tight sm:text-4xl md:text-5xl xl:text-6xl/none">
@@ -89,8 +89,8 @@ export function HeroSection() {
                     </motion.span>
                   </a>
                 </GradientButton>
-                <MagneticButton className="neumorphic-button">
-                  <a href="#process" className="px-6 py-2.5 block" onClick={(e) => {
+                <MagneticButton className="neumorphic-button" strength={15}>
+                  <a href="#process" className="px-6 py-2.5 block whitespace-nowrap" onClick={(e) => {
                     e.preventDefault()
                     document.querySelector("#process")?.scrollIntoView({ behavior: "smooth" })
                   }}>
@@ -108,14 +108,14 @@ export function HeroSection() {
             </motion.div>
           </ScrollReveal>
 
-          <ScrollReveal delay={0.3}>
-            <SpotlightCard className="relative overflow-hidden rounded-2xl border border-gray-500/20 p-1">
+          <ScrollReveal delay={0.3} className="min-w-0 overflow-hidden">
+            <SpotlightCard className="relative overflow-hidden rounded-2xl border border-gray-500/20 p-1 w-full">
               <div className="absolute inset-0 bg-gradient-to-br from-gray-900/10 via-transparent to-blue-900/10 z-10 rounded-2xl pointer-events-none"></div>
               <div className="relative z-20 rounded-xl overflow-hidden">
                 <img
                   src="https://cdn.poehali.dev/files/6a673fa0-e2f4-4dfa-9e8c-d9925c7daff7.jpg"
                   alt="Восстановленный двигатель Volvo Penta"
-                  className="w-full h-[280px] sm:h-[360px] md:h-[420px] object-cover"
+                  className="w-full h-[240px] sm:h-[320px] md:h-[400px] lg:h-[420px] object-cover"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3 sm:p-6">
                   <div className="flex gap-2 sm:gap-4">

@@ -7,9 +7,10 @@ interface ScrollRevealProps {
   delay?: number
   duration?: number
   once?: boolean
+  className?: string
 }
 
-export function ScrollReveal({ children, delay = 0, duration = 0.5, once = true }: ScrollRevealProps) {
+export function ScrollReveal({ children, delay = 0, duration = 0.5, once = true, className }: ScrollRevealProps) {
   const controls = useAnimation()
   const ref = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref, { once })
@@ -30,6 +31,7 @@ export function ScrollReveal({ children, delay = 0, duration = 0.5, once = true 
   return (
     <motion.div
       ref={ref}
+      className={className}
       initial="hidden"
       animate={controls}
       variants={{
