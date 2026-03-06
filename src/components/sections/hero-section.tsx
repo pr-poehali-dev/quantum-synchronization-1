@@ -3,9 +3,7 @@ import { ArrowRight, ShieldCheck, FileText } from "lucide-react"
 
 import { SpotlightCard } from "@/components/ui/spotlight-card"
 import { ScrollReveal } from "@/components/scroll-reveal"
-import { MagneticButton } from "@/components/ui/magnetic-button"
 import { AnimatedBackground } from "@/components/ui/animated-background"
-import { GradientButton } from "@/components/ui-library/buttons/gradient-button"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -34,91 +32,80 @@ export function HeroSection() {
   }
 
   return (
-    <section id="home" className="relative w-full py-12 md:py-24 lg:py-32 xl:py-40 overflow-hidden">
+    <section id="home" className="relative w-full pt-24 pb-12 md:py-24 lg:py-32 xl:py-40 overflow-hidden">
       <AnimatedBackground variant="gradient" color="rgba(100, 100, 100, 0.06)" secondaryColor="rgba(30, 58, 100, 0.08)" />
 
-      <div className="container px-4 md:px-6 max-w-full">
-        <div className="grid gap-8 lg:grid-cols-[1fr_460px] lg:gap-12 xl:grid-cols-[1fr_560px] min-w-0">
+      <div className="w-full px-4 md:px-6 md:container">
+        <div className="grid gap-8 lg:grid-cols-[1fr_460px] lg:gap-12 xl:grid-cols-[1fr_560px]">
           <ScrollReveal>
             <motion.div
-              className="flex flex-col justify-center space-y-6"
+              className="flex flex-col justify-center space-y-5"
               variants={containerVariants}
               initial="hidden"
               animate="visible"
             >
-              <motion.div className="space-y-4" variants={itemVariants}>
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-500/10 border border-gray-500/20 text-gray-600 dark:text-gray-400 text-xs sm:text-sm font-medium mb-2 max-w-full flex-wrap">
+              <motion.div className="space-y-3" variants={itemVariants}>
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-500/10 border border-gray-500/20 text-gray-600 dark:text-gray-400 text-xs font-medium">
                   <span className="inline-block w-2 h-2 rounded-full bg-gray-600 dark:bg-gray-400 flex-shrink-0"></span>
                   Volvo Penta · MerCruiser · Морские двигатели
                 </div>
-                <h1 className="text-3xl font-heading font-bold tracking-tight sm:text-4xl md:text-5xl xl:text-6xl/none">
+                <h1 className="text-2xl font-heading font-bold tracking-tight sm:text-4xl md:text-5xl xl:text-6xl/none">
                   <span className="gradient-text">Восстановленный двигатель</span>
                   <br />
                   <span className="text-foreground">с нулевым пробегом.</span>
                   <br />
                   <span className="text-foreground">Вдвое дешевле нового.</span>
                 </h1>
-                <div className="flex flex-wrap gap-4 pt-2">
+                <div className="flex flex-wrap gap-3 pt-1">
                   <div className="flex items-center gap-2 text-muted-foreground">
-                    <ShieldCheck className="h-5 w-5 text-gray-600 dark:text-gray-400 flex-shrink-0" />
+                    <ShieldCheck className="h-4 w-4 text-gray-600 dark:text-gray-400 flex-shrink-0" />
                     <span className="text-sm font-medium">Гарантия 1 год</span>
                   </div>
                   <div className="flex items-center gap-2 text-muted-foreground">
-                    <FileText className="h-5 w-5 text-gray-600 dark:text-gray-400 flex-shrink-0" />
+                    <FileText className="h-4 w-4 text-gray-600 dark:text-gray-400 flex-shrink-0" />
                     <span className="text-sm font-medium">Полная документация</span>
                   </div>
                 </div>
               </motion.div>
 
-              <motion.div className="flex flex-col gap-4 sm:flex-row sm:items-center" variants={itemVariants}>
-                <GradientButton
-                  glowAmount={8}
-                  className="px-6 py-2.5 text-base"
-                  gradientFrom="from-gray-700"
-                  gradientTo="to-gray-900"
-                  asChild
+              <motion.div className="flex flex-col gap-3 w-full" variants={itemVariants}>
+                <a
+                  href="#contacts"
+                  onClick={scrollToContact}
+                  className="flex items-center justify-center gap-2 w-full px-5 py-3 rounded-xl bg-gray-800 hover:bg-gray-900 dark:bg-gray-200 dark:hover:bg-white text-white dark:text-gray-900 font-medium text-sm transition-colors"
                 >
-                  <a href="#contacts" onClick={scrollToContact} className="flex items-center">
-                    Рассчитать стоимость моего двигателя
-                    <motion.span
-                      className="ml-2 inline-block"
-                      animate={{ x: [0, 4, 0] }}
-                      transition={{ repeat: Infinity, repeatDelay: 2, duration: 1 }}
-                    >
-                      <ArrowRight className="h-4 w-4" />
-                    </motion.span>
-                  </a>
-                </GradientButton>
-                <MagneticButton className="neumorphic-button" strength={15}>
-                  <a href="#process" className="px-6 py-2.5 block whitespace-nowrap" onClick={(e) => {
-                    e.preventDefault()
-                    document.querySelector("#process")?.scrollIntoView({ behavior: "smooth" })
-                  }}>
-                    Как мы работаем
-                  </a>
-                </MagneticButton>
+                  Рассчитать стоимость моего двигателя
+                  <ArrowRight className="h-4 w-4 flex-shrink-0" />
+                </a>
+                <a
+                  href="#process"
+                  onClick={(e) => { e.preventDefault(); document.querySelector("#process")?.scrollIntoView({ behavior: "smooth" }) }}
+                  className="flex items-center justify-center w-full px-5 py-3 rounded-xl border border-border bg-background hover:bg-muted text-foreground font-medium text-sm transition-colors"
+                >
+                  Как мы работаем
+                </a>
               </motion.div>
 
-              <motion.div variants={itemVariants} className="pt-2">
+              <motion.div variants={itemVariants}>
                 <p className="text-sm text-muted-foreground flex items-center">
-                  <span className="inline-block w-2 h-2 rounded-full bg-green-500 mr-2"></span>
+                  <span className="inline-block w-2 h-2 rounded-full bg-green-500 mr-2 flex-shrink-0"></span>
                   15 лет специализируемся на морских двигателях
                 </p>
               </motion.div>
             </motion.div>
           </ScrollReveal>
 
-          <ScrollReveal delay={0.3} className="min-w-0 overflow-hidden">
+          <ScrollReveal delay={0.3} className="overflow-hidden">
             <SpotlightCard className="relative overflow-hidden rounded-2xl border border-gray-500/20 p-1 w-full">
               <div className="absolute inset-0 bg-gradient-to-br from-gray-900/10 via-transparent to-blue-900/10 z-10 rounded-2xl pointer-events-none"></div>
               <div className="relative z-20 rounded-xl overflow-hidden">
                 <img
                   src="https://cdn.poehali.dev/files/6a673fa0-e2f4-4dfa-9e8c-d9925c7daff7.jpg"
                   alt="Восстановленный двигатель Volvo Penta"
-                  className="w-full h-[240px] sm:h-[320px] md:h-[400px] lg:h-[420px] object-cover"
+                  className="w-full h-[220px] sm:h-[300px] md:h-[400px] lg:h-[420px] object-cover"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3 sm:p-6">
-                  <div className="flex gap-2 sm:gap-4">
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3 sm:p-5">
+                  <div className="flex gap-2">
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
