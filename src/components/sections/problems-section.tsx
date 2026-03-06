@@ -27,10 +27,10 @@ const problems = [
   },
   {
     icon: "Gauge",
-    color: "text-orange-400",
-    bgColor: "bg-orange-500/10",
-    borderColor: "border-orange-500/20",
-    glowColor: "rgba(249, 115, 22, 0.15)",
+    color: "text-red-500",
+    bgColor: "bg-red-600/10",
+    borderColor: "border-red-600/20",
+    glowColor: "rgba(220, 38, 38, 0.15)",
     title: "Износ — двигатель «устал»",
     description:
       "Масложор, стук, падение мощности. Замена поршневой, вкладышей, капитальное обновление всего агрегата.",
@@ -40,12 +40,12 @@ const problems = [
 export function ProblemsSection() {
   return (
     <section id="problems" className="relative w-full py-16 md:py-24 overflow-hidden">
-      <AnimatedBackground variant="dots" color="rgba(249, 115, 22, 0.04)" />
+      <AnimatedBackground variant="dots" color="rgba(220, 38, 38, 0.04)" />
 
       <div className="container px-6 md:px-8">
         <ScrollReveal>
           <div className="text-center mb-12 space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-500 text-sm font-medium">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-600/10 border border-red-600/20 text-red-600 text-sm font-medium">
               Диагностика неисправностей
             </div>
             <h2 className="text-3xl font-heading font-bold tracking-tight sm:text-4xl">

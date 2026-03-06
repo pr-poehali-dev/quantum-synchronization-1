@@ -40,12 +40,12 @@ const advantages = [
 export function FeaturesSection() {
   return (
     <section id="features" className="relative w-full py-16 md:py-24 overflow-hidden">
-      <AnimatedBackground variant="grid" color="rgba(249, 115, 22, 0.03)" />
+      <AnimatedBackground variant="grid" color="rgba(220, 38, 38, 0.03)" />
 
       <div className="container px-6 md:px-8">
         <ScrollReveal>
           <div className="text-center mb-12 space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-500 text-sm font-medium">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-600/10 border border-red-600/20 text-red-600 text-sm font-medium">
               Наши преимущества
             </div>
             <h2 className="text-3xl font-heading font-bold tracking-tight sm:text-4xl">
@@ -64,11 +64,11 @@ export function FeaturesSection() {
           {advantages.map((adv, index) => (
             <ScrollReveal key={adv.title} delay={index * 0.1}>
               <GlowingTiltCard
-                glowColor="rgba(249, 115, 22, 0.12)"
-                className="h-full rounded-2xl border border-border hover:border-orange-500/30 bg-card p-6 flex flex-col gap-4 transition-colors duration-300"
+                glowColor="rgba(220, 38, 38, 0.12)"
+                className="h-full rounded-2xl border border-border hover:border-red-600/30 bg-card p-6 flex flex-col gap-4 transition-colors duration-300"
               >
-                <div className="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center flex-shrink-0">
-                  <Icon name={adv.icon} className="h-6 w-6 text-orange-500" />
+                <div className="w-12 h-12 rounded-xl bg-red-600/10 flex items-center justify-center flex-shrink-0">
+                  <Icon name={adv.icon} className="h-6 w-6 text-red-600" />
                 </div>
                 <div>
                   <h3 className="text-base font-heading font-semibold mb-1.5">{adv.title}</h3>

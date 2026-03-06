@@ -35,7 +35,7 @@ export function HeroSection() {
 
   return (
     <section id="home" className="relative w-full py-12 md:py-24 lg:py-32 xl:py-40 overflow-hidden">
-      <AnimatedBackground variant="gradient" color="rgba(249, 115, 22, 0.06)" secondaryColor="rgba(30, 58, 100, 0.08)" />
+      <AnimatedBackground variant="gradient" color="rgba(220, 38, 38, 0.06)" secondaryColor="rgba(30, 58, 100, 0.08)" />
 
       <div className="container px-6 md:px-8">
         <div className="grid gap-8 lg:grid-cols-[1fr_460px] lg:gap-12 xl:grid-cols-[1fr_560px]">
@@ -47,8 +47,8 @@ export function HeroSection() {
               animate="visible"
             >
               <motion.div className="space-y-4" variants={itemVariants}>
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-500 text-sm font-medium mb-2">
-                  <span className="inline-block w-2 h-2 rounded-full bg-orange-500"></span>
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-600/10 border border-red-600/20 text-red-600 text-sm font-medium mb-2">
+                  <span className="inline-block w-2 h-2 rounded-full bg-red-600"></span>
                   Volvo Penta · MerCruiser · Морские двигатели
                 </div>
                 <h1 className="text-4xl font-heading font-bold tracking-tight sm:text-5xl xl:text-6xl/none">
@@ -60,11 +60,11 @@ export function HeroSection() {
                 </h1>
                 <div className="flex flex-wrap gap-4 pt-2">
                   <div className="flex items-center gap-2 text-muted-foreground">
-                    <ShieldCheck className="h-5 w-5 text-orange-500 flex-shrink-0" />
+                    <ShieldCheck className="h-5 w-5 text-red-600 flex-shrink-0" />
                     <span className="text-sm font-medium">Гарантия 1 год</span>
                   </div>
                   <div className="flex items-center gap-2 text-muted-foreground">
-                    <FileText className="h-5 w-5 text-orange-500 flex-shrink-0" />
+                    <FileText className="h-5 w-5 text-red-600 flex-shrink-0" />
                     <span className="text-sm font-medium">Полная документация</span>
                   </div>
                 </div>
@@ -74,8 +74,8 @@ export function HeroSection() {
                 <GradientButton
                   glowAmount={8}
                   className="px-6 py-2.5 text-base"
-                  gradientFrom="from-orange-500"
-                  gradientTo="to-orange-600"
+                  gradientFrom="from-red-600"
+                  gradientTo="to-red-700"
                   asChild
                 >
                   <a href="#contacts" onClick={scrollToContact} className="flex items-center">
@@ -109,8 +109,8 @@ export function HeroSection() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.3}>
-            <SpotlightCard className="relative overflow-hidden rounded-2xl border border-orange-500/20 p-1">
-              <div className="absolute inset-0 bg-gradient-to-br from-orange-900/10 via-transparent to-blue-900/10 z-10 rounded-2xl pointer-events-none"></div>
+            <SpotlightCard className="relative overflow-hidden rounded-2xl border border-red-600/20 p-1">
+              <div className="absolute inset-0 bg-gradient-to-br from-red-900/10 via-transparent to-blue-900/10 z-10 rounded-2xl pointer-events-none"></div>
               <div className="relative z-20 rounded-xl overflow-hidden">
                 <img
                   src="https://cdn.poehali.dev/files/6a673fa0-e2f4-4dfa-9e8c-d9925c7daff7.jpg"
@@ -125,7 +125,7 @@ export function HeroSection() {
                       transition={{ delay: 0.8 }}
                       className="flex-1 bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/20 text-center"
                     >
-                      <div className="text-2xl font-bold text-orange-400">15 лет</div>
+                      <div className="text-2xl font-bold text-red-500">15 лет</div>
                       <div className="text-xs text-white/70">опыта</div>
                     </motion.div>
                     <motion.div
@@ -134,7 +134,7 @@ export function HeroSection() {
                       transition={{ delay: 1.0 }}
                       className="flex-1 bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/20 text-center"
                     >
-                      <div className="text-2xl font-bold text-orange-400">×2</div>
+                      <div className="text-2xl font-bold text-red-500">×2</div>
                       <div className="text-xs text-white/70">дешевле нового</div>
                     </motion.div>
                     <motion.div
@@ -143,7 +143,7 @@ export function HeroSection() {
                       transition={{ delay: 1.2 }}
                       className="flex-1 bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/20 text-center"
                     >
-                      <div className="text-2xl font-bold text-orange-400">1 год</div>
+                      <div className="text-2xl font-bold text-red-500">1 год</div>
                       <div className="text-xs text-white/70">гарантия</div>
                     </motion.div>
                   </div>

@@ -16,12 +16,12 @@ export function ContactsSection() {
 
   return (
     <section id="contacts" className="relative w-full py-16 md:py-24 overflow-hidden">
-      <AnimatedBackground variant="gradient" color="rgba(249, 115, 22, 0.07)" secondaryColor="rgba(30, 58, 100, 0.07)" />
+      <AnimatedBackground variant="gradient" color="rgba(220, 38, 38, 0.07)" secondaryColor="rgba(30, 58, 100, 0.07)" />
 
       <div className="container px-6 md:px-8">
         <ScrollReveal>
           <div className="text-center mb-12 space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-500 text-sm font-medium">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-600/10 border border-red-600/20 text-red-600 text-sm font-medium">
               Связаться с нами
             </div>
             <h2 className="text-3xl font-heading font-bold tracking-tight sm:text-4xl">
@@ -35,8 +35,8 @@ export function ContactsSection() {
             <div className="flex flex-col gap-6">
               <div className="rounded-2xl border border-border bg-card p-6 flex flex-col gap-5">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center flex-shrink-0">
-                    <Icon name="MapPin" className="h-5 w-5 text-orange-500" />
+                  <div className="w-10 h-10 rounded-xl bg-red-600/10 flex items-center justify-center flex-shrink-0">
+                    <Icon name="MapPin" className="h-5 w-5 text-red-600" />
                   </div>
                   <div>
                     <div className="text-xs text-muted-foreground uppercase tracking-wider font-medium mb-1">Адрес</div>
@@ -46,8 +46,8 @@ export function ContactsSection() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center flex-shrink-0">
-                    <Icon name="Clock" className="h-5 w-5 text-orange-500" />
+                  <div className="w-10 h-10 rounded-xl bg-red-600/10 flex items-center justify-center flex-shrink-0">
+                    <Icon name="Clock" className="h-5 w-5 text-red-600" />
                   </div>
                   <div>
                     <div className="text-xs text-muted-foreground uppercase tracking-wider font-medium mb-1">Режим работы</div>
@@ -56,12 +56,12 @@ export function ContactsSection() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center flex-shrink-0">
-                    <Icon name="Phone" className="h-5 w-5 text-orange-500" />
+                  <div className="w-10 h-10 rounded-xl bg-red-600/10 flex items-center justify-center flex-shrink-0">
+                    <Icon name="Phone" className="h-5 w-5 text-red-600" />
                   </div>
                   <div>
                     <div className="text-xs text-muted-foreground uppercase tracking-wider font-medium mb-1">Телефон</div>
-                    <a href="tel:+79995550012" className="font-semibold text-base hover:text-orange-500 transition-colors">
+                    <a href="tel:+79995550012" className="font-semibold text-base hover:text-red-600 transition-colors">
                       +7 (999) 555-00-12
                     </a>
                     <div className="flex gap-2 mt-2">
@@ -88,12 +88,12 @@ export function ContactsSection() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center flex-shrink-0">
-                    <Icon name="Mail" className="h-5 w-5 text-orange-500" />
+                  <div className="w-10 h-10 rounded-xl bg-red-600/10 flex items-center justify-center flex-shrink-0">
+                    <Icon name="Mail" className="h-5 w-5 text-red-600" />
                   </div>
                   <div>
                     <div className="text-xs text-muted-foreground uppercase tracking-wider font-medium mb-1">Email</div>
-                    <a href="mailto:info@redmar.pro" className="font-medium text-sm hover:text-orange-500 transition-colors">
+                    <a href="mailto:info@redmar.pro" className="font-medium text-sm hover:text-red-600 transition-colors">
                       info@redmar.pro
                     </a>
                   </div>
@@ -115,7 +115,7 @@ export function ContactsSection() {
 
           <ScrollReveal delay={0.2}>
             <motion.div
-              className="rounded-2xl border border-orange-500/30 bg-card p-8 shadow-[0_0_30px_rgba(249,115,22,0.1)]"
+              className="rounded-2xl border border-red-600/30 bg-card p-8 shadow-[0_0_30px_rgba(220,38,38,0.1)]"
             >
               {!submitted ? (
                 <>
@@ -132,7 +132,7 @@ export function ContactsSection() {
                         onChange={(e) => setForm({ ...form, name: e.target.value })}
                         placeholder="Александр"
                         required
-                        className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500/50 transition-all text-sm"
+                        className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-red-600/50 focus:border-red-600/50 transition-all text-sm"
                       />
                     </div>
                     <div>
@@ -143,14 +143,14 @@ export function ContactsSection() {
                         onChange={(e) => setForm({ ...form, phone: e.target.value })}
                         placeholder="+7 (___) ___-__-__"
                         required
-                        className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500/50 transition-all text-sm"
+                        className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-red-600/50 focus:border-red-600/50 transition-all text-sm"
                       />
                     </div>
                     <GradientButton
                       glowAmount={8}
                       className="w-full py-3 text-sm mt-2"
-                      gradientFrom="from-orange-500"
-                      gradientTo="to-orange-600"
+                      gradientFrom="from-red-600"
+                      gradientTo="to-red-700"
                     >
                       <button type="submit" className="w-full flex items-center justify-center gap-2">
                         <Icon name="PhoneCall" className="h-4 w-4" />
@@ -177,7 +177,7 @@ export function ContactsSection() {
                   </p>
                   <button
                     onClick={() => { setSubmitted(false); setForm({ name: "", phone: "" }) }}
-                    className="text-orange-500 text-sm hover:underline mt-2"
+                    className="text-red-600 text-sm hover:underline mt-2"
                   >
                     Отправить ещё одну заявку
                   </button>

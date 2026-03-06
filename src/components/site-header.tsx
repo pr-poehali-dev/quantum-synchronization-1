@@ -37,11 +37,9 @@ export function SiteHeader() {
       )}
     >
       <div className="container px-4 md:px-6 flex h-16 items-center justify-between">
-        <a href="/" className="flex items-center space-x-2 z-10">
-          <div className="w-8 h-8 rounded-lg bg-orange-500 flex items-center justify-center">
-            <Icons.logo className="h-4 w-4 text-white" />
-          </div>
-          <span className="font-heading text-xl font-bold tracking-tight">RedMar</span>
+        <a href="/" className="flex items-center z-10">
+          <span className="font-heading text-base font-black tracking-tight px-2 py-1 bg-red-600 text-white rounded-l-md">RED</span>
+          <span className="font-heading text-base font-black tracking-tight px-2 py-1 bg-blue-700 text-white rounded-r-md">MAR</span>
         </a>
 
         {/* Desktop Navigation - Hidden on mobile */}
@@ -69,7 +67,7 @@ export function SiteHeader() {
 
           {/* Desktop CTA Buttons - Hidden on mobile */}
           <div className="hidden md:flex items-center space-x-2">
-            <Button size="sm" className="bg-orange-500 hover:bg-orange-600 text-white rounded-xl" asChild>
+            <Button size="sm" className="bg-red-600 hover:bg-red-700 text-white rounded-xl" asChild>
               <a href="#contacts" onClick={(e) => {
                 e.preventDefault()
                 document.querySelector("#contacts")?.scrollIntoView({ behavior: "smooth" })
@@ -108,11 +106,9 @@ export function SiteHeader() {
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
             >
               <div className="flex items-center justify-between p-4 border-b border-border">
-                <a href="/" className="flex items-center space-x-2" onClick={closeMobileMenu}>
-                  <div className="w-7 h-7 rounded-lg bg-orange-500 flex items-center justify-center">
-                    <Icons.logo className="h-3.5 w-3.5 text-white" />
-                  </div>
-                  <span className="font-heading text-lg font-bold">RedMar</span>
+                <a href="/" className="flex items-center" onClick={closeMobileMenu}>
+                  <span className="font-heading text-base font-black tracking-tight px-2 py-1 bg-red-600 text-white rounded-l-md">RED</span>
+                  <span className="font-heading text-base font-black tracking-tight px-2 py-1 bg-blue-700 text-white rounded-r-md">MAR</span>
                 </a>
                 <button
                   onClick={closeMobileMenu}
@@ -145,7 +141,7 @@ export function SiteHeader() {
               </div>
 
               <div className="mt-auto p-4 border-t border-border">
-                <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white rounded-xl" asChild>
+                <Button className="w-full bg-red-600 hover:bg-red-700 text-white rounded-xl" asChild>
                   <a href="#contacts" onClick={(e) => {
                     e.preventDefault()
                     document.querySelector("#contacts")?.scrollIntoView({ behavior: "smooth" })

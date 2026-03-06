@@ -50,7 +50,7 @@ export function ProcessSection() {
       <div className="container px-6 md:px-8">
         <ScrollReveal>
           <div className="text-center mb-12 space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-500 text-sm font-medium">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-600/10 border border-red-600/20 text-red-600 text-sm font-medium">
               Процесс работы
             </div>
             <h2 className="text-3xl font-heading font-bold tracking-tight sm:text-4xl">
@@ -66,15 +66,15 @@ export function ProcessSection() {
           {steps.map((step, index) => (
             <ScrollReveal key={step.number} delay={index * 0.1}>
               <motion.div
-                className="relative h-full rounded-2xl border border-border hover:border-orange-500/30 bg-card p-6 flex flex-col gap-4 transition-all duration-300"
+                className="relative h-full rounded-2xl border border-border hover:border-red-600/30 bg-card p-6 flex flex-col gap-4 transition-all duration-300"
                 whileHover={{ y: -3, transition: { duration: 0.25 } }}
               >
                 <div className="flex items-start gap-4">
                   <div className="relative flex-shrink-0">
-                    <div className="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center">
-                      <Icon name={step.icon} className="h-6 w-6 text-orange-500" />
+                    <div className="w-12 h-12 rounded-xl bg-red-600/10 flex items-center justify-center">
+                      <Icon name={step.icon} className="h-6 w-6 text-red-600" />
                     </div>
-                    <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center">
+                    <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-red-600 flex items-center justify-center">
                       <span className="text-white text-xs font-bold">{step.number}</span>
                     </div>
                   </div>
@@ -90,7 +90,7 @@ export function ProcessSection() {
                       <motion.div
                         animate={{ x: [0, 4, 0] }}
                         transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-                        className="text-orange-500/30"
+                        className="text-red-600/30"
                       >
                         <Icon name="ArrowRight" className="h-5 w-5" />
                       </motion.div>

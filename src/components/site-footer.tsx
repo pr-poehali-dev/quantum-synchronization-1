@@ -20,19 +20,17 @@ export function SiteFooter() {
       <div className="container flex flex-col gap-8 py-12">
         <div className="flex flex-col gap-8 md:flex-row md:justify-between">
           <div className="flex flex-col gap-4 max-w-sm">
-            <a href="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-orange-500 flex items-center justify-center">
-                <Icons.logo className="h-4 w-4 text-white" />
-              </div>
-              <span className="font-heading text-xl font-bold tracking-tight">RedMar</span>
+            <a href="/" className="flex items-center">
+              <span className="font-heading text-base font-black tracking-tight px-2 py-1 bg-red-600 text-white rounded-l-md">RED</span>
+              <span className="font-heading text-base font-black tracking-tight px-2 py-1 bg-blue-700 text-white rounded-r-md">MAR</span>
             </a>
             <p className="text-muted-foreground text-sm leading-relaxed opacity-80">
               Восстановление морских двигателей Volvo Penta и MerCruiser. 15 лет опыта, гарантия 1 год, полная документация.
             </p>
             <div className="flex flex-col gap-1 text-sm text-muted-foreground">
               <span>Московская обл., г. Домодедово, объездное шоссе, вл. 1</span>
-              <a href="tel:+79995550012" className="hover:text-orange-500 transition-colors">+7 (999) 555-00-12</a>
-              <a href="mailto:info@redmar.pro" className="hover:text-orange-500 transition-colors">info@redmar.pro</a>
+              <a href="tel:+79995550012" className="hover:text-red-600 transition-colors">+7 (999) 555-00-12</a>
+              <a href="mailto:info@redmar.pro" className="hover:text-red-600 transition-colors">info@redmar.pro</a>
             </div>
           </div>
 
@@ -44,7 +42,7 @@ export function SiteFooter() {
                   <a
                     href={link.href}
                     onClick={scrollTo(link.href)}
-                    className="text-sm text-muted-foreground transition-colors hover:text-orange-500"
+                    className="text-sm text-muted-foreground transition-colors hover:text-red-600"
                   >
                     {link.name}
                   </a>
@@ -59,7 +57,7 @@ export function SiteFooter() {
             <a
               href="#contacts"
               onClick={scrollTo("#contacts")}
-              className="mt-3 inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white text-sm font-medium transition-colors"
+              className="mt-3 inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-red-600 hover:bg-red-700 text-white text-sm font-medium transition-colors"
             >
               Рассчитать стоимость
             </a>
