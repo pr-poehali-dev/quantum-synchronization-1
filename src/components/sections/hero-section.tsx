@@ -101,8 +101,8 @@ export function HeroSection() {
               <div className="flex gap-1">
                 <div className="flex-1 overflow-hidden">
                   <img
-                    src="https://cdn.poehali.dev/projects/1d0efd06-d472-4a9f-94b2-d81e299c245e/bucket/b9c43bfd-d8cd-4e10-b26d-1dcc27ce2e47.jpg"
-                    alt="Восстановленный двигатель Volvo Penta"
+                    src="https://cdn.poehali.dev/files/6a673fa0-e2f4-4dfa-9e8c-d9925c7daff7.jpg"
+                    alt="Восстановленный двигатель Volvo Penta — красный"
                     className="w-full h-[260px] sm:h-[360px] md:h-[440px] lg:h-[480px] object-cover object-center"
                   />
                 </div>
