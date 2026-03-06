@@ -53,7 +53,7 @@ export function SolutionsSection() {
     <section id="solutions" className="relative w-full py-16 md:py-24 overflow-hidden">
       <AnimatedBackground variant="gradient" color="rgba(30, 58, 100, 0.06)" secondaryColor="rgba(220, 38, 38, 0.04)" />
 
-      <div className="container px-6 md:px-8">
+      <div className="container px-4 md:px-6">
         <ScrollReveal>
           <div className="text-center mb-12 space-y-3">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-600/10 border border-red-600/20 text-red-600 text-sm font-medium">
@@ -68,7 +68,7 @@ export function SolutionsSection() {
           </div>
         </ScrollReveal>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-3">
           {solutions.map((solution, index) => (
             <ScrollReveal key={solution.title} delay={index * 0.15}>
               <motion.div
@@ -85,7 +85,7 @@ export function SolutionsSection() {
                   </div>
                 )}
 
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-40 sm:h-48 overflow-hidden">
                   <img
                     src={solution.image}
                     alt={solution.title}
@@ -93,7 +93,7 @@ export function SolutionsSection() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
                   <div className="absolute bottom-4 left-4">
-                    <span className="text-5xl font-heading font-bold text-red-600/20 select-none">
+                    <span className="text-4xl sm:text-5xl font-heading font-bold text-red-600/20 select-none">
                       {solution.number}
                     </span>
                   </div>

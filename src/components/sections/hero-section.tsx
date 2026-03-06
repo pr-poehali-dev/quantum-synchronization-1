@@ -37,8 +37,8 @@ export function HeroSection() {
     <section id="home" className="relative w-full py-12 md:py-24 lg:py-32 xl:py-40 overflow-hidden">
       <AnimatedBackground variant="gradient" color="rgba(220, 38, 38, 0.06)" secondaryColor="rgba(30, 58, 100, 0.08)" />
 
-      <div className="container px-6 md:px-8">
-        <div className="grid gap-8 lg:grid-cols-[1fr_460px] lg:gap-12 xl:grid-cols-[1fr_560px]">
+      <div className="container px-4 md:px-6">
+        <div className="grid gap-6 lg:grid-cols-[1fr_460px] lg:gap-12 xl:grid-cols-[1fr_560px]">
           <ScrollReveal>
             <motion.div
               className="flex flex-col justify-center space-y-6"
@@ -51,7 +51,7 @@ export function HeroSection() {
                   <span className="inline-block w-2 h-2 rounded-full bg-red-600"></span>
                   Volvo Penta · MerCruiser · Морские двигатели
                 </div>
-                <h1 className="text-4xl font-heading font-bold tracking-tight sm:text-5xl xl:text-6xl/none">
+                <h1 className="text-3xl font-heading font-bold tracking-tight sm:text-4xl md:text-5xl xl:text-6xl/none">
                   <span className="gradient-text">Восстановленный двигатель</span>
                   <br />
                   <span className="text-foreground">с нулевым пробегом.</span>
@@ -115,35 +115,35 @@ export function HeroSection() {
                 <img
                   src="https://cdn.poehali.dev/files/6a673fa0-e2f4-4dfa-9e8c-d9925c7daff7.jpg"
                   alt="Восстановленный двигатель Volvo Penta"
-                  className="w-full h-[420px] object-cover"
+                  className="w-full h-[280px] sm:h-[360px] md:h-[420px] object-cover"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
-                  <div className="flex gap-4">
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3 sm:p-6">
+                  <div className="flex gap-2 sm:gap-4">
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.8 }}
-                      className="flex-1 bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/20 text-center"
+                      className="flex-1 bg-white/10 backdrop-blur-sm rounded-xl p-2 sm:p-3 border border-white/20 text-center"
                     >
-                      <div className="text-2xl font-bold text-red-500">15 лет</div>
+                      <div className="text-lg sm:text-2xl font-bold text-red-500">15 лет</div>
                       <div className="text-xs text-white/70">опыта</div>
                     </motion.div>
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 1.0 }}
-                      className="flex-1 bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/20 text-center"
+                      className="flex-1 bg-white/10 backdrop-blur-sm rounded-xl p-2 sm:p-3 border border-white/20 text-center"
                     >
-                      <div className="text-2xl font-bold text-red-500">×2</div>
+                      <div className="text-lg sm:text-2xl font-bold text-red-500">×2</div>
                       <div className="text-xs text-white/70">дешевле нового</div>
                     </motion.div>
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 1.2 }}
-                      className="flex-1 bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/20 text-center"
+                      className="flex-1 bg-white/10 backdrop-blur-sm rounded-xl p-2 sm:p-3 border border-white/20 text-center"
                     >
-                      <div className="text-2xl font-bold text-red-500">1 год</div>
+                      <div className="text-lg sm:text-2xl font-bold text-red-500">1 год</div>
                       <div className="text-xs text-white/70">гарантия</div>
                     </motion.div>
                   </div>

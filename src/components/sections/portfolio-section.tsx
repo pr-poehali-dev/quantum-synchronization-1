@@ -124,7 +124,7 @@ export function PortfolioSection() {
 
             <motion.div
               key={lightbox}
-              className="relative max-w-4xl max-h-[85vh] px-16 flex flex-col items-center"
+              className="relative max-w-4xl max-h-[85vh] px-8 sm:px-16 flex flex-col items-center w-full"
               initial={{ scale: 0.92, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.92, opacity: 0 }}

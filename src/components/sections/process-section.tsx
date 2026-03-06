@@ -47,7 +47,7 @@ export function ProcessSection() {
     <section id="process" className="relative w-full py-16 md:py-24 overflow-hidden">
       <AnimatedBackground variant="dots" color="rgba(30, 58, 100, 0.05)" />
 
-      <div className="container px-6 md:px-8">
+      <div className="container px-4 md:px-6">
         <ScrollReveal>
           <div className="text-center mb-12 space-y-3">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-600/10 border border-red-600/20 text-red-600 text-sm font-medium">
