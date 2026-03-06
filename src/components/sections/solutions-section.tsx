@@ -85,13 +85,13 @@ export function SolutionsSection() {
                   </div>
                 )}
 
-                <div className="relative h-40 sm:h-48 overflow-hidden">
+                <div className="relative h-52 sm:h-60 overflow-hidden">
                   <img
                     src={solution.image}
                     alt={solution.title}
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-card to-transparent" />
                   <div className="absolute bottom-4 left-4">
                     <span className="text-4xl sm:text-5xl font-heading font-bold text-gray-600/20 select-none">
                       {solution.number}
